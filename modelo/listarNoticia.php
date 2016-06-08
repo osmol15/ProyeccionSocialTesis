@@ -38,6 +38,30 @@
 	   echo mysql_error();
     }
 ?>
+
+
+<html>
+<head>
+
+ <!--funcion para borrar -->
+<script type="text/javascript">
+function edt_id(id)
+{
+ if(confirm('Seguro quiere editar ?'))
+ {
+  window.location.href='EditarNoticias.php?edit_id='+id;
+ }
+}
+function delete_id(id)
+{
+ if(confirm('Seguro que desea borrar ?'))
+ {
+  window.location.href='ListarNoticias.php?delete_id='+id;
+ }
+}
+</script>
+</head>
+
 <div class="row">
 <div class="col-xs-12">
       <section class="content-header">
@@ -49,11 +73,15 @@
         <li><a href="#"><i class="fa fa-users"></i>Noticias</a></li>
         <li class="active">Listar</li>
       </ol>
+
+
     </section>
 </div>    
 </div>
 
 <br><br>
+
+
 <div class="row">
     <div class="col-xs-12">
         <?php
@@ -61,7 +89,7 @@
             $result_set=mysql_query($sql_query);
             while($row=mysql_fetch_row($result_set))
             {
-        ?>             
+        ?>       
             <div class="col-md-12">
                 <div class="box box-success box-solid collapsed-box">
                     <div class="box-header with-border">
@@ -70,9 +98,9 @@
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
                             </button>
                             <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Editar">
-                                <i class="fa fa-edit"></i></button>
+                                <a href="javascript:edt_id('<?php echo $row[0]; ?>')"><i class="fa fa-edit"></i></a></button>
                             <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Eliminar">
-                                <i class="fa fa-times"></i></button>
+                                <a href="javascript:delete_id('<?php echo $row[0]; ?>')"><i class="fa fa-times"></i></a></button>
                         </div>
                         <!-- /.box-tools -->
                     </div>
@@ -92,3 +120,5 @@
         ?>
 </div>
 </div>
+
+</html>
