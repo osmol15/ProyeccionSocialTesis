@@ -56,7 +56,7 @@ function delete_id(id)
 {
  if(confirm('Seguro que desea borrar ?'))
  {
-  window.location.href='ListarNoticias.php?delete_id='+id;
+  window.location.href='listarNoticia.php?delete_id='+id;
  }
 }
 </script>
