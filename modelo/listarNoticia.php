@@ -98,9 +98,10 @@ function delete_id(id)
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
                             </button>
                             <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Editar">
-                                <a href="javascript:edt_id('<?php echo $row[0]; ?>')"><i class="fa fa-edit"></i></a></button>
+                                <a href="#" onclick="javascript:edt_id('<?php echo $row[0]; ?>')"><i class="fa fa-edit"></i></a></button>
+                            
                             <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Eliminar">
-                                <a href="javascript:delete_id('<?php echo $row[0]; ?>')"><i class="fa fa-times"></i></a></button>
+                                <a href="#" onclick="javascript:delete_id('<?php echo $row[0]; ?>')"><i class="fa fa-times"></i></a></button>
                         </div>
                         <!-- /.box-tools -->
                     </div>
