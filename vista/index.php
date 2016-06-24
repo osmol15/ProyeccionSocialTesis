@@ -51,7 +51,7 @@ $msg=$_GET['error'];
   <!-- /.login-logo -->
   <div class="login-box-body">
     <a href="#">
-      <img src="../minerva.svg" alt="Logo UES" width="200" class="center-block">
+      <img src="../images/minerva.svg" alt="Logo UES" width="200" class="center-block">
     </a>
     <h1 class="text-center">PROYECCION SOCIAL <br> UESFMOCC</h1>
     <p class="login-box-msg">Iniciar Sesi&oacute;n</p>
