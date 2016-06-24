@@ -329,6 +329,7 @@ echo "</header>";
 <script src="../scripts/datatables/jquery.dataTables.min.js"></script>
 <script src="../scripts/datatables/dataTables.bootstrap.min.js"></script>
 <script src="../scripts/iCheck/icheck.js"></script>
+<script type="text/javascript" src="../scripts/enviarDatos.js"></script>
 
 <script>
   $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
