@@ -25,7 +25,7 @@ $selectDestino=$_GET["select"]; $opcionSeleccionada=$_GET["opcion"];
 if(validaSelect($selectDestino) && validaOpcion($opcionSeleccionada))
 {
 	$tabla=$listadoSelects[$selectDestino];
-	include '../db/conSegura.php';
+	include '../modelo/conSegura.php';
 	conectar();
 	$consulta=mysql_query("SELECT * FROM $tabla WHERE iddepartamento='$opcionSeleccionada'") or die(mysql_error());
 	desconectar();
